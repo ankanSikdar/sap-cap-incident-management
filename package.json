@@ -12,6 +12,28 @@
     "start": "cds-serve",
     "watch-incidents": "cds watch --open incidents/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "bob": {
+              "roles": [
+                "support"
+              ]
+            },
+            "alice": {
+              "roles": [
+                "support",
+                "admin"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
   "private": true,
   "workspaces": [
     "app/*"
