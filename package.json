@@ -2,15 +2,26 @@
   "name": "incident-management",
   "version": "1.0.0",
   "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.26.4",
+    "@sap-cloud-sdk/http-client": "^3.26.4",
+    "@sap-cloud-sdk/resilience": "^3.26.4",
+    "@sap-cloud-sdk/util": "^3.26.4",
     "@sap/cds": "^9"
   },
   "devDependencies": {
+    "@cap-js/cds-test": "^1.0.1",
     "@cap-js/sqlite": "^2.4",
-    "cds-plugin-ui5": "^0.17.0"
+    "axios": "^1.18.0",
+    "cds-plugin-ui5": "^0.17.0",
+    "chai": "^6.0.0",
+    "chai-as-promised": "^8.0.2",
+    "chai-subset": "^1.6.0",
+    "jest": "^30.4.2"
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-incidents": "cds watch --open incidents/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-incidents": "cds watch --open incidents/index.html?sap-ui-xx-viewCache=false",
+    "test": "npx jest tests/test.js"
   },
   "cds": {
     "requires": {
